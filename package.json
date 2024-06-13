@@ -14,6 +14,7 @@
 	"license": "MIT",
 	"dependencies": {
 		"bcryptjs": "^2.4.3",
+		"bitcoinjs-message": "^2.2.0",
 		"coinkey": "^3.0.0",
 		"cors": "^2.8.5",
 		"dotenv": "^16.4.5",

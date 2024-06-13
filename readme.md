@@ -38,8 +38,11 @@ Rename the `.env.example` file to `.env` and add your settings like mongodb conn
 ## Available Scripts
 
 `yarn dev`: Starts the server in development mode using ts-node-dev.
+
 `yarn build`: Compiles the TypeScript project to JavaScript.
+
 `yarn start`: Starts the server with the compiled code.
+
 
 ## Contribution
 

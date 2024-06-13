@@ -20,7 +20,7 @@ router.post("/", async (req, res) => {
 
 		if (!is_valid) return res.status(400).json({ message: "invalid signature." });
 
-		const token = jwt.sign({ user }, SECRET_KEY, { expiresIn: "1d" });
+		const token = jwt.sign({ user }, SECRET_KEY, { expiresIn: user.role === "admin" ? "1d" : "7d" });
 
 		return res.json({ user, token });
 	} catch (error) {

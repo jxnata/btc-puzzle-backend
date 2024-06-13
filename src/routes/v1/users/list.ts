@@ -12,7 +12,7 @@ router.get("/", admin, async (req, res) => {
 
 		return res.json({ users, skip, limit });
 	} catch (error) {
-		return res.status(400).json({ message: "an error occurred while listing users." });
+		return res.status(400).json({ message: "failed to retrieve user list due to server error." });
 	}
 });
 

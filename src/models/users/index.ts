@@ -17,6 +17,12 @@ const UserSchema = new Schema<IUser>({
 		trim: true,
 		unique: true,
 	},
+	role: {
+		type: String,
+		enum: ["admin", "user"],
+		default: "user",
+		required: true,
+	},
 	created_at: {
 		type: Date,
 		default: Date.now,

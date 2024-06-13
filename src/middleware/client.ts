@@ -4,7 +4,7 @@ import { SECRET_KEY } from "../constants";
 import Users from "../models/users";
 import IUser from "../models/users/types";
 
-const admin = (req: Request, res: Response, next: NextFunction) => {
+const client = (req: Request, res: Response, next: NextFunction) => {
 	try {
 		const authHeader = req.header("authorization");
 
@@ -31,8 +31,6 @@ const admin = (req: Request, res: Response, next: NextFunction) => {
 
 				if (!user) return res.status(404).json({ message: "user requested not found." });
 
-				if (user.role !== "admin") return res.status(403).json({ message: "unauthorized access." });
-
 				(req as Request & { user?: IUser }).user = user;
 			}
 
@@ -43,4 +41,4 @@ const admin = (req: Request, res: Response, next: NextFunction) => {
 	}
 };
 
-export default admin;
+export default client;

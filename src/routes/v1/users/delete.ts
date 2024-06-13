@@ -12,7 +12,7 @@ router.delete("/:id", admin, async (req, res) => {
 
 		return res.json({ message: "user deleted successfully" });
 	} catch (error) {
-		return res.status(500).json({ message: "error to delete user." });
+		return res.status(500).json({ message: "error occurred while deleting the user." });
 	}
 });
 

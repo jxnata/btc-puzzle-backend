@@ -8,11 +8,11 @@ const router = Router();
 router.post("/", admin, async (req, res) => {
 	try {
 
-		const user = await new Users<IUser>(req.body).save();
+		const user = await new Users<IUser>({ ...req.body, role: 'user' }).save();
 
 		return res.status(201).json({ user: user._id });
 	} catch (error) {
-		return res.status(500).json({ message: "error to create user." });
+		return res.status(500).json({ message: "failed to create user due to server error." });
 	}
 });
 

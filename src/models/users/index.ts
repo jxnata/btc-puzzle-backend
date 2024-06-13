@@ -5,9 +5,11 @@ const UserSchema = new Schema<IUser>({
 	username: {
 		type: String,
 		required: true,
-		lowercase: true,
 		trim: true,
 		unique: true,
+		validation: {
+			is: /^[a-zA-Z0-9._]+$/,
+		}
 	},
 	address: {
 		type: String,
@@ -15,9 +17,11 @@ const UserSchema = new Schema<IUser>({
 		trim: true,
 		unique: true,
 	},
-	winner: {
-		type: Boolean,
-		default: false,
+	role: {
+		type: String,
+		enum: ["admin", "user"],
+		default: "user",
+		required: true,
 	},
 	created_at: {
 		type: Date,

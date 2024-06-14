@@ -6,7 +6,7 @@ const router = Router();
 
 router.get("/view/:id", admin, async (req, res) => {
 	try {
-		const user = await Users.findById(req.params.id)
+		const user = await Users.findById(req.params.id);
 
 		if (!user) {
 			return res.status(404).json({ message: "user not found." });

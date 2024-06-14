@@ -6,7 +6,7 @@ const router = Router();
 
 router.put("/:id", admin, async (req, res) => {
 	try {
-		const user = await Users.findByIdAndUpdate(req.params.id, { ...req.body, role: 'user' }, { new: true });
+		const user = await Users.findByIdAndUpdate(req.params.id, { ...req.body, role: "user" }, { new: true });
 
 		if (!user) return res.status(404).json({ message: "user not found." });
 

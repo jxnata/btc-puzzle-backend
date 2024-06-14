@@ -7,8 +7,7 @@ const router = Router();
 
 router.post("/", admin, async (req, res) => {
 	try {
-
-		const user = await new Users<IUser>({ ...req.body, role: 'user' }).save();
+		const user = await new Users<IUser>({ ...req.body, role: "user" }).save();
 
 		return res.status(201).json({ user: user._id });
 	} catch (error) {

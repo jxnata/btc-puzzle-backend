@@ -10,7 +10,7 @@ router.post("/", async (req, res) => {
 	try {
 		const { username, signature } = req.body;
 
-		const user = await Users.findOne({ username })
+		const user = await Users.findOne({ username });
 
 		if (!user) {
 			return res.status(400).json({ message: "user not found." });

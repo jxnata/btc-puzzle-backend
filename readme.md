@@ -1,6 +1,6 @@
-# BTC Prize Pool Backend
+# BTC Puzzle Pool Backend
 
-BTC Prize Pool Backend is the API responsible for managing the decentralized pool for solving BTC puzzles, authenticating users, and distributing rewards.
+BTC Puzzle Pool Backend is the API responsible for managing the decentralized pool for solving BTC puzzles, authenticating users, and distributing rewards.
 
 ## Technologies Used
 

@@ -18,6 +18,6 @@ const PoolSchema = new Schema<IPool>({
 	},
 });
 
-const Pools = mongoose.model<IPool>("Pool", PoolSchema, "Pools");
+const Pools = mongoose.model<IPool>("Pool", PoolSchema, "pools");
 
 export default Pools;

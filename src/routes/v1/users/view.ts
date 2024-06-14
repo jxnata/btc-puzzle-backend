@@ -4,7 +4,7 @@ import Users from "../../../models/users";
 
 const router = Router();
 
-router.get("/view/:id", admin, async (req, res) => {
+router.get("/:id", admin, async (req, res) => {
 	try {
 		const user = await Users.findById(req.params.id);
 

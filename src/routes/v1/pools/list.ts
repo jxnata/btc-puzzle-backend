@@ -8,7 +8,7 @@ router.get("/", client, async (req, res) => {
 	try {
 		const { skip = 0, limit = 10 } = req.query;
 
-		const pools = await Pools.find().skip(Number(skip)).limit(Number(limit));
+		const pools = await Pools.find().skip(Number(skip)).limit(Number(limit)).populate("puzzle");
 
 		return res.json({ pools, skip, limit });
 	} catch (error) {

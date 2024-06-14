@@ -4,9 +4,9 @@ import client from "../../../middleware/client";
 
 const router = Router();
 
-router.get("/view/:id", client, async (req, res) => {
+router.get("/:id", client, async (req, res) => {
 	try {
-		const pool = await Pools.findById(req.params.id);
+		const pool = await Pools.findById(req.params.id).populate("puzzle");
 
 		if (!pool) {
 			return res.status(404).json({ message: "pool not found." });

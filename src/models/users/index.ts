@@ -9,7 +9,7 @@ const UserSchema = new Schema<IUser>({
 		unique: true,
 		validation: {
 			is: /^[a-zA-Z0-9._]+$/,
-		}
+		},
 	},
 	address: {
 		type: String,

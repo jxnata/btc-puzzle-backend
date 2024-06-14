@@ -1,4 +1,4 @@
-import * as bitcoinMessage from 'bitcoinjs-message';
+import * as bitcoinMessage from "bitcoinjs-message";
 
 const verifySignature = (address: string, signature: string, message: string) => {
 	try {
@@ -6,6 +6,6 @@ const verifySignature = (address: string, signature: string, message: string) =>
 	} catch (error) {
 		return false;
 	}
-}
+};
 
-export default verifySignature
+export default verifySignature;

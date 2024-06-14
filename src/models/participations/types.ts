@@ -1,14 +1,14 @@
 import mongoose, { Document } from "mongoose";
 
 export default interface IParticipation extends Document {
-	pool: mongoose.Types.ObjectId
-	user: mongoose.Types.ObjectId
+	pool: mongoose.Types.ObjectId;
+	user: mongoose.Types.ObjectId;
 	block: {
-		start: string
-		end: string
+		start: string;
+		end: string;
 	};
-	finished: boolean
-	is_winner: boolean
+	finished: boolean;
+	is_winner: boolean;
 	finished_at: Date;
 	created_at: Date;
 }

@@ -1,7 +1,7 @@
 import mongoose, { Document } from "mongoose";
 
 export default interface IReward extends Document {
-	pool: mongoose.Types.ObjectId
+	pool: mongoose.Types.ObjectId;
 	winner: mongoose.Types.ObjectId;
 	total: string;
 	fee: string;

@@ -40,6 +40,6 @@ const ParticipationSchema = new Schema<IParticipation>({
 	},
 });
 
-const Participations = mongoose.model<IParticipation>("Participation", ParticipationSchema, "Participations");
+const Participations = mongoose.model<IParticipation>("Participation", ParticipationSchema, "participations");
 
 export default Participations;

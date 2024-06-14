@@ -4,7 +4,7 @@ import client from "../../../middleware/client";
 
 const router = Router();
 
-router.get("/view/:id", client, async (req, res) => {
+router.get("/:id", client, async (req, res) => {
 	try {
 		const puzzle = await Puzzles.findById(req.params.id);
 

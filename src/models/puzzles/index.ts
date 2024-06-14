@@ -49,6 +49,6 @@ const PuzzleSchema = new Schema<IPuzzle>({
 	},
 });
 
-const Puzzles = mongoose.model<IPuzzle>("Puzzle", PuzzleSchema, "Puzzles");
+const Puzzles = mongoose.model<IPuzzle>("Puzzle", PuzzleSchema, "puzzles");
 
 export default Puzzles;
